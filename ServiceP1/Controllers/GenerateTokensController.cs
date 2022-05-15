@@ -43,7 +43,7 @@ namespace ServiceP1.Controllers
 #if DEBUG
                 var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:5001/p2");
 #else
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://service-p2.azurewebsites.net/api/p2/validate");
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://tokengenerationp2.azurewebsites.net");
 #endif
                 request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 request.Content = new StringContent(jsonModel, Encoding.UTF8);
