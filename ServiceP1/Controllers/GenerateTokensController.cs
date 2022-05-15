@@ -41,9 +41,9 @@ namespace ServiceP1.Controllers
 
                 var jsonModel = JsonConvert.SerializeObject(model);
 #if DEBUG
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:5001/p2");
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://feitokengeneratorp2.azurewebsites.net/p2");
 #else
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://tokengenerationp2.azurewebsites.net");
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://feitokengeneratorp2.azurewebsites.net/p2");
 #endif
                 request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 request.Content = new StringContent(jsonModel, Encoding.UTF8);
